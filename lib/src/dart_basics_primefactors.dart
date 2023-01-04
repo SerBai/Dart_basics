@@ -30,11 +30,12 @@ class PrimeFactors {
         lpf.add(pf1);
       }
       return lpf;
-    } else
+    } else {
       throw Exception("Используйте число больше 1");
+    }
   }
 
   void displayPF() {
-    print("Простые множители " + calcPF().toString());
+    print("Простые множители числа $_digit: ${calcPF()}");
   }
 }

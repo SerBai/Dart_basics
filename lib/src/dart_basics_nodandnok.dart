@@ -16,8 +16,9 @@ class NodAndNok {
         (d1 >= d2) ? d1 %= d2 : d2 %= d1;
       }
       return (d1 > d2) ? d1 : d2;
-    } else
+    } else {
       throw Exception("Используйте натуральные числа");
+    }
   }
 
   int calcNok() {
@@ -25,10 +26,10 @@ class NodAndNok {
   }
 
   void displayNod() {
-    print("НОД чисел " + calcNod().toString());
+    print("НОД чисел $_first и $_second равен: ${calcNod()}");
   }
 
   void displayNok() {
-    print("НОК чисел " + calcNok().toString());
+    print("НОК чисел $_first и $_second равен:${calcNok()}");
   }
 }
