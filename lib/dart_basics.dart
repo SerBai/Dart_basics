@@ -8,3 +8,5 @@ export 'src/find_num_in_str.dart' show FindNumInStr;
 export 'src/word_in_collection.dart' show WordInCollection;
 export 'src/numbers_in_collection.dart' show NumbersInCollection;
 export 'src/point.dart' show Point;
+export 'src/root_in_number.dart' show RootInNumber;
+export 'src/user.dart';

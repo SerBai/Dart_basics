@@ -16,4 +16,3 @@ class ConvertToBinary {
     print("$_decimal в двоичной системе: ${methodToBinary()}");
   }
 }
-// TODO: exeption

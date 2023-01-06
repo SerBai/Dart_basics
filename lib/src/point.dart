@@ -12,22 +12,17 @@ import 'dart:math';
 /// и конструктор, возвращающий точку с координатами [1,1,1],
 
 class Point {
-  late int _x;
-  late int _y;
-  late int _z;
+  int _x;
+  int _y;
+  int _z;
 
-  Point(int posX, int posY, int posZ) {
-    _x = posX;
-    _y = posY;
-    _z = posZ;
-  }
+  Point(int posX, int posY, int posZ)
+      : _x = posX,
+        _y = posY,
+        _z = posZ;
 
-  static Point basePoint = Point(1, 1, 1);
-  static Point startPoint = Point(0, 0, 0);
-
-  factory Point.factoryPoint(int fX, int fY, int fZ) {
-    startPoint.displayPoint(startPoint);
-    return Point(fX, fY, fZ);
+  factory Point.zeroPoint() {
+    return Point(0, 0, 0);
   }
 
   void displayPoint(Point pointForPrint) {
@@ -44,10 +39,10 @@ class Point {
     return distanceToPoint;
   }
 
-  double squareCalc(Point firstPoint, Point secondPoint, Point thirdPoint) {
-    double segmentA = firstPoint.distanceTo(secondPoint);
+  double squareCalc(Point secondPoint, Point thirdPoint) {
+    double segmentA = this.distanceTo(secondPoint);
     double segmentB = secondPoint.distanceTo(thirdPoint);
-    double segmentC = thirdPoint.distanceTo(firstPoint);
+    double segmentC = thirdPoint.distanceTo(this);
     double perimeter = (segmentA * segmentB * segmentC) / 2;
     double squareByPoints = sqrt(perimeter *
         (perimeter - segmentA) *
@@ -61,10 +56,8 @@ class Point {
         "Расстояние между точками: ${distanceTo(argument).toStringAsFixed(3)}");
   }
 
-  void displaySquare(pointOne, pointTwo, pointThree) {
+  void displaySquare(pointTwo, pointThree) {
     print(
-        "Площадь треугольника: ${squareCalc(pointOne, pointTwo, pointThree).toStringAsFixed(3)}");
+        "Площадь треугольника: ${squareCalc(pointTwo, pointThree).toStringAsFixed(3)}");
   }
 }
-
-// TODO: exeption

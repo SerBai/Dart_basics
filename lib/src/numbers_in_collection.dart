@@ -31,8 +31,10 @@ class NumbersInCollection {
   }
 
   void displayNumbrs() {
-    print("В коллекции есть цифры: ${createSetNumbers()}");
+    if (_collection.length > 0) {
+      print("В коллекции есть цифры: ${createSetNumbers()}");
+    } else {
+      print("В коллекции нет цифр.");
+    }
   }
 }
-// TODO: exeption
-

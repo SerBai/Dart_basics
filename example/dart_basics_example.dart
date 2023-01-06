@@ -50,14 +50,27 @@ void main() {
   print("Задача 6");
   Point firstPoint = Point(2, 5, -2);
   Point secondPoint = Point(1, 0, 6);
-  Point thirdPoint = Point.factoryPoint(3, 1, 2);
+  Point thirdPoint = Point(3, 1, 2);
+  Point.zeroPoint();
   firstPoint.displayDistance(secondPoint);
-  Point.basePoint.displaySquare(firstPoint, secondPoint, thirdPoint);
-  firstPoint.displayPoint(Point.basePoint);
+  firstPoint.displaySquare(secondPoint, thirdPoint);
+  firstPoint.displayPoint(Point.zeroPoint());
 
   print("Задача 7");
+  num digit = 625;
+  int degree = 4;
+  num result = digit.rootInNumber(degree);
+  print(
+      "Корень числа $digit в степени $degree равен: ${result.toStringAsFixed(3)}");
 
   print("Задача 8");
+  UserManager userManager = UserManager();
+  userManager.addUser(User("abc@cloun.ru"));
+  userManager.addUser(AdminUser("xyz@black.ru"));
+  userManager.addUser(GeneralUser("xyz@slim.org"));
+  userManager.displayUserBase();
+  userManager.deleteUser(AdminUser("xyz@black.ru"));
+  userManager.displayUserBase();
 
   print("Задача 9");
 

@@ -16,5 +16,3 @@ class ConvertToDecimal {
     print("$_binary в десятичной системе: ${methodToDecimal()}");
   }
 }
-// TODO: exeption
-
